@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot UI</title>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Our JS file -->
+    <script src="js/main.js"></script>
+
+    <div class="w-full h-full max-w-100 shadow-lg bg-white flex flex-col">
+
+        <!-- Chat Header -->
+        <div class="py-4 px-6 bg-blue-600 text-white flex flex-row items-center">
+            <h2 class="text-xl font-bold flex-auto">AI Assistant</h2>
+            <button id="upload-btn" class="py-2 px-4 bg-white text-blue-700 rounded-md hover:bg-slate-100 self-end" onclick="startEmbedding()">Create vector store</button>
+        </div>
+
+        <!-- Chat Body -->
+        <div id="chat-window" class="flex-1 p-6 overflow-y-auto">
+            <div id="message-list" class="mb-4 flex flex-col">
+                <!-- Chat messages will be added here -->
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="py-4 px-6 bg-gray-100 rounded-b-lg">
+            <div class="flex items-center">
+                <input id="user-input" type="text" placeholder="Type a message..."
+                    class="flex-1 py-2 px-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+                <button class="ml-4 py-2 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
